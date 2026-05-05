@@ -109,7 +109,7 @@ export function extractCompetitors(text: string, brand: string, knownBrands: str
       competitors.push(b)
     }
   }
-  return [...new Set(competitors)].slice(0, 5)
+  return Array.from(new Set(competitors)).slice(0, 5)
 }
 
 export function getGrade(score: number): string {
